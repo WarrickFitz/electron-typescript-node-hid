@@ -1,0 +1,19 @@
+{
+  "name": "rthread2",
+  "version": "1.0.0",
+  "description": "rthread2 descriptin",
+  "main": "electron-dev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^3.0.6",
+    "electron-updater": "^4.1.2",
+    "node-hid": "^0.7.9"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.8.5"
+  }
+}

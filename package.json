@@ -1,0 +1,60 @@
+{
+  "name": "cra-craco-electron-example",
+  "version": "0.1.1",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "private": true,
+  "scripts": {
+    "start": "yarn start:electron",
+    "start:web": "env-cmd -f .env.web craco start --config craco.config.web.js",
+    "start:electron": "electron .",
+    "start:electron-dev": "electron app/electron-dev.js",
+    "build": "yarn build:electron",
+    "build:web": "craco build --config craco.config.web.js",
+    "build:electron": "env-cmd -f .env.electron craco build --config craco.config.electron.js",
+    "watch:electron": "npm-watch",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "watch": {
+    "build:electron": "src/**/*.*"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@craco/craco": "^5.2.1",
+    "@types/jest": "24.0.13",
+    "@types/node": "12.0.3",
+    "@types/react": "16.8.19",
+    "@types/react-dom": "16.8.4",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.41.0",
+    "electron-rebuild": "^1.8.5",
+    "env-cmd": "^9.0.2",
+    "node-hid": "^0.7.9",
+    "npm-watch": "^0.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:wwlib/cra-craco-electron-example.git"
+  },
+  "keywords": [
+    "react,create-react-app,cra,craco,electron,electron-builder"
+  ],
+  "author": "Andrew Rapo <andrew@wwlib.org> (http://wwlib.org/)",
+  "license": "MIT"
+}
